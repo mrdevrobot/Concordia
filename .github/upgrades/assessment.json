@@ -1,0 +1,509 @@
+{
+  "settings": {
+    "components": {
+      "code": false,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2025-12-29T22:28:17.7831844Z",
+  "analysisEndTime": "2025-12-29T22:28:20.4976947Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 5,
+      "issues": 3,
+      "incidents": 12,
+      "effort": 12
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 4,
+        "Optional": 0,
+        "Potential": 8,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 5,
+        "Project": 4,
+        "Api": 3
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "Concordia.Core\\Concordia.Core.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "Concordia.Core",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net9.0",
+          "net8.0",
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 21,
+        "numberOfCodeFiles": 21,
+        "linesTotal": 959,
+        "linesOfCode": 959,
+        "totalApiScanned": 558,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "badc1fdc-70c8-4532-8804-6556a78e3398",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Concordia.Core\\Concordia.Core.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.DependencyInjection.Abstractions, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.DependencyInjection.Abstractions, and replace with new package Microsoft.Extensions.DependencyInjection.Abstractions 10.0.1",
+              "protected": "Microsoft.Extensions.DependencyInjection.Abstractions, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.DependencyInjection.Abstractions, and replace with new package Microsoft.Extensions.DependencyInjection.Abstractions 10.0.1"
+            },
+            "kind": "File",
+            "path": "Concordia.Core\\Concordia.Core.csproj",
+            "snippet": "Microsoft.Extensions.DependencyInjection.Abstractions, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.DependencyInjection.Abstractions, and replace with new package Microsoft.Extensions.DependencyInjection.Abstractions 10.0.1",
+            "protectedSnippet": "Microsoft.Extensions.DependencyInjection.Abstractions, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.DependencyInjection.Abstractions, and replace with new package Microsoft.Extensions.DependencyInjection.Abstractions 10.0.1",
+            "label": "Microsoft.Extensions.DependencyInjection.Abstractions 9.0.8",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.DependencyInjection.Abstractions",
+              "PackageVersion": "9.0.8",
+              "PackageNewVersion": "10.0.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "505f9933-314e-4546-a869-94a8982433bd",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Concordia.Core\\Concordia.Core.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging.Abstractions, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.1",
+              "protected": "Microsoft.Extensions.Logging.Abstractions, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.1"
+            },
+            "kind": "File",
+            "path": "Concordia.Core\\Concordia.Core.csproj",
+            "snippet": "Microsoft.Extensions.Logging.Abstractions, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.1",
+            "protectedSnippet": "Microsoft.Extensions.Logging.Abstractions, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 10.0.1",
+            "label": "Microsoft.Extensions.Logging.Abstractions 9.0.8",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging.Abstractions",
+              "PackageVersion": "9.0.8",
+              "PackageNewVersion": "10.0.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "357688b0-8952-4823-8c08-1c59ac1dbe8f",
+          "ruleId": "Project.0002",
+          "projectPath": "Concordia.Core\\Concordia.Core.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Framework di destinazione corrente: net9.0;net8.0;netstandard2.0\nFramework di destinazione consigliato: net9.0;net8.0;netstandard2.0;net10.0",
+              "protected": "Framework di destinazione corrente: net9.0;net8.0;netstandard2.0\nFramework di destinazione consigliato: net9.0;net8.0;netstandard2.0;net10.0"
+            },
+            "kind": "File",
+            "path": "Concordia.Core\\Concordia.Core.csproj",
+            "snippet": "Framework di destinazione corrente: net9.0;net8.0;netstandard2.0\nFramework di destinazione consigliato: net9.0;net8.0;netstandard2.0;net10.0",
+            "protectedSnippet": "Framework di destinazione corrente: net9.0;net8.0;netstandard2.0\nFramework di destinazione consigliato: net9.0;net8.0;netstandard2.0;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net9.0;net8.0;netstandard2.0",
+              "RecommendedTargetFramework": "net9.0;net8.0;netstandard2.0;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "tests\\Concordia.Core.Tests\\Concordia.Core.Tests.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "Concordia.Core.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net9.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 5,
+        "numberOfCodeFiles": 3,
+        "linesTotal": 3168,
+        "linesOfCode": 1373,
+        "totalApiScanned": 872,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "14bb5a94-4b1f-468f-8bec-6fd0238fb917",
+          "ruleId": "NuGet.0002",
+          "projectPath": "tests\\Concordia.Core.Tests\\Concordia.Core.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.DependencyInjection, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.DependencyInjection, and replace with new package Microsoft.Extensions.DependencyInjection 10.0.1",
+              "protected": "Microsoft.Extensions.DependencyInjection, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.DependencyInjection, and replace with new package Microsoft.Extensions.DependencyInjection 10.0.1"
+            },
+            "kind": "File",
+            "path": "tests\\Concordia.Core.Tests\\Concordia.Core.Tests.csproj",
+            "snippet": "Microsoft.Extensions.DependencyInjection, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.DependencyInjection, and replace with new package Microsoft.Extensions.DependencyInjection 10.0.1",
+            "protectedSnippet": "Microsoft.Extensions.DependencyInjection, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.DependencyInjection, and replace with new package Microsoft.Extensions.DependencyInjection 10.0.1",
+            "label": "Microsoft.Extensions.DependencyInjection 9.0.8",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.DependencyInjection",
+              "PackageVersion": "9.0.8",
+              "PackageNewVersion": "10.0.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "e4876d51-0ca8-4cb7-8fb8-f0ec2ddd335b",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\Concordia.Core.Tests\\Concordia.Core.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Framework di destinazione corrente: net9.0\nFramework di destinazione consigliato: net10.0",
+              "protected": "Framework di destinazione corrente: net9.0\nFramework di destinazione consigliato: net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\Concordia.Core.Tests\\Concordia.Core.Tests.csproj",
+            "snippet": "Framework di destinazione corrente: net9.0\nFramework di destinazione consigliato: net10.0",
+            "protectedSnippet": "Framework di destinazione corrente: net9.0\nFramework di destinazione consigliato: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net9.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "examples\\Concordia.Examples.Web\\Concordia.Examples.Web.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 5,
+      "properties": {
+        "appName": "Concordia.Examples.Web",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net9.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 331,
+        "linesOfCode": 314,
+        "totalApiScanned": 257,
+        "minLinesOfCodeToChange": 3,
+        "maxLinesOfCodeToChange": 3
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "0b64f5fd-9f31-4c8f-9cf1-850a988c0204",
+          "ruleId": "NuGet.0002",
+          "projectPath": "examples\\Concordia.Examples.Web\\Concordia.Examples.Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.OpenApi, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.1",
+              "protected": "Microsoft.AspNetCore.OpenApi, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.1"
+            },
+            "kind": "File",
+            "path": "examples\\Concordia.Examples.Web\\Concordia.Examples.Web.csproj",
+            "snippet": "Microsoft.AspNetCore.OpenApi, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.1",
+            "protectedSnippet": "Microsoft.AspNetCore.OpenApi, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 10.0.1",
+            "label": "Microsoft.AspNetCore.OpenApi 9.0.8",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.OpenApi",
+              "PackageVersion": "9.0.8",
+              "PackageNewVersion": "10.0.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "5d4b2b50-5952-4f1c-aaf6-462b2fa8b60f",
+          "ruleId": "Project.0002",
+          "projectPath": "examples\\Concordia.Examples.Web\\Concordia.Examples.Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Framework di destinazione corrente: net9.0\nFramework di destinazione consigliato: net10.0",
+              "protected": "Framework di destinazione corrente: net9.0\nFramework di destinazione consigliato: net10.0"
+            },
+            "kind": "File",
+            "path": "examples\\Concordia.Examples.Web\\Concordia.Examples.Web.csproj",
+            "snippet": "Framework di destinazione corrente: net9.0\nFramework di destinazione consigliato: net10.0",
+            "protectedSnippet": "Framework di destinazione corrente: net9.0\nFramework di destinazione consigliato: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net9.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "d9df3049-fa38-4b1c-b11c-8eb1295ea9cc",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "examples\\Concordia.Examples.Web\\Concordia.Examples.Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.SwaggerDoc(\u0022v1\u0022, new OpenApiInfo\r\n    {\r\n        Version = \u0022v1\u0022,\r\n        Title = \u0022Concordia API\u0022, // You can change your API title here\r\n        Description = \u0022An example API using Concordia.MediatR\u0022,\r\n        Contact = new OpenApiContact\r\n        {\r\n            Name = \u0022Your Name/Company\u0022,\r\n            Url = new Uri(\u0022https://example.com/contact\u0022) // Replace with your URL\r\n        }\r\n    });",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "examples\\Concordia.Examples.Web\\Program.cs",
+            "snippet": "options.SwaggerDoc(\u0022v1\u0022, new OpenApiInfo\r\n    {\r\n        Version = \u0022v1\u0022,\r\n        Title = \u0022Concordia API\u0022, // You can change your API title here\r\n        Description = \u0022An example API using Concordia.MediatR\u0022,\r\n        Contact = new OpenApiContact\r\n        {\r\n            Name = \u0022Your Name/Company\u0022,\r\n            Url = new Uri(\u0022https://example.com/contact\u0022) // Replace with your URL\r\n        }\r\n    });",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "Documentazione dell\u0027API",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 13,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "58845cc9-eacf-4c23-b6ee-5877ffc05c07",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "examples\\Concordia.Examples.Web\\Concordia.Examples.Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.SwaggerDoc(\u0022v1\u0022, new OpenApiInfo\r\n    {\r\n        Version = \u0022v1\u0022,\r\n        Title = \u0022Concordia API\u0022, // You can change your API title here\r\n        Description = \u0022An example API using Concordia.MediatR\u0022,\r\n        Contact = new OpenApiContact\r\n        {\r\n            Name = \u0022Your Name/Company\u0022,\r\n            Url = new Uri(\u0022https://example.com/contact\u0022) // Replace with your URL\r\n        }\r\n    });",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "examples\\Concordia.Examples.Web\\Program.cs",
+            "snippet": "options.SwaggerDoc(\u0022v1\u0022, new OpenApiInfo\r\n    {\r\n        Version = \u0022v1\u0022,\r\n        Title = \u0022Concordia API\u0022, // You can change your API title here\r\n        Description = \u0022An example API using Concordia.MediatR\u0022,\r\n        Contact = new OpenApiContact\r\n        {\r\n            Name = \u0022Your Name/Company\u0022,\r\n            Url = new Uri(\u0022https://example.com/contact\u0022) // Replace with your URL\r\n        }\r\n    });",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "links": [
+              {
+                "title": "Documentazione dell\u0027API",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 13,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "f84a1133-ff1b-499e-9609-4df62886ac05",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "examples\\Concordia.Examples.Web\\Concordia.Examples.Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.SwaggerDoc(\u0022v1\u0022, new OpenApiInfo\r\n    {\r\n        Version = \u0022v1\u0022,\r\n        Title = \u0022Concordia API\u0022, // You can change your API title here\r\n        Description = \u0022An example API using Concordia.MediatR\u0022,\r\n        Contact = new OpenApiContact\r\n        {\r\n            Name = \u0022Your Name/Company\u0022,\r\n            Url = new Uri(\u0022https://example.com/contact\u0022) // Replace with your URL\r\n        }\r\n    });",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "examples\\Concordia.Examples.Web\\Program.cs",
+            "snippet": "options.SwaggerDoc(\u0022v1\u0022, new OpenApiInfo\r\n    {\r\n        Version = \u0022v1\u0022,\r\n        Title = \u0022Concordia API\u0022, // You can change your API title here\r\n        Description = \u0022An example API using Concordia.MediatR\u0022,\r\n        Contact = new OpenApiContact\r\n        {\r\n            Name = \u0022Your Name/Company\u0022,\r\n            Url = new Uri(\u0022https://example.com/contact\u0022) // Replace with your URL\r\n        }\r\n    });",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "Documentazione dell\u0027API",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 13,
+            "column": 4
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "Concordia.Generator\\Concordia.Generator.csproj",
+      "startingProject": true,
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "Concordia.Generator",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 3,
+        "linesTotal": 231,
+        "linesOfCode": 231,
+        "totalApiScanned": 254,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [],
+      "features": []
+    },
+    {
+      "path": "Concordia.MediatR\\Concordia.MediatR.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "Concordia.MediatR",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net9.0",
+          "net8.0",
+          "netstandard2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 896,
+        "linesOfCode": 896,
+        "totalApiScanned": 777,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "be7b0e1c-3eed-47e8-b5b8-43dc9c709c66",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Concordia.MediatR\\Concordia.MediatR.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.DependencyInjection.Abstractions, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.DependencyInjection.Abstractions, and replace with new package Microsoft.Extensions.DependencyInjection.Abstractions 10.0.1",
+              "protected": "Microsoft.Extensions.DependencyInjection.Abstractions, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.DependencyInjection.Abstractions, and replace with new package Microsoft.Extensions.DependencyInjection.Abstractions 10.0.1"
+            },
+            "kind": "File",
+            "path": "Concordia.MediatR\\Concordia.MediatR.csproj",
+            "snippet": "Microsoft.Extensions.DependencyInjection.Abstractions, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.DependencyInjection.Abstractions, and replace with new package Microsoft.Extensions.DependencyInjection.Abstractions 10.0.1",
+            "protectedSnippet": "Microsoft.Extensions.DependencyInjection.Abstractions, 9.0.8\n\nRaccomandazione:\n\nRemove Microsoft.Extensions.DependencyInjection.Abstractions, and replace with new package Microsoft.Extensions.DependencyInjection.Abstractions 10.0.1",
+            "label": "Microsoft.Extensions.DependencyInjection.Abstractions 9.0.8",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.DependencyInjection.Abstractions",
+              "PackageVersion": "9.0.8",
+              "PackageNewVersion": "10.0.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "820f5269-e647-4e60-b2d2-37bf28984341",
+          "ruleId": "Project.0002",
+          "projectPath": "Concordia.MediatR\\Concordia.MediatR.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Framework di destinazione corrente: net9.0;net8.0;netstandard2.0\nFramework di destinazione consigliato: net9.0;net8.0;netstandard2.0;net10.0",
+              "protected": "Framework di destinazione corrente: net9.0;net8.0;netstandard2.0\nFramework di destinazione consigliato: net9.0;net8.0;netstandard2.0;net10.0"
+            },
+            "kind": "File",
+            "path": "Concordia.MediatR\\Concordia.MediatR.csproj",
+            "snippet": "Framework di destinazione corrente: net9.0;net8.0;netstandard2.0\nFramework di destinazione consigliato: net9.0;net8.0;netstandard2.0;net10.0",
+            "protectedSnippet": "Framework di destinazione corrente: net9.0;net8.0;netstandard2.0\nFramework di destinazione consigliato: net9.0;net8.0;netstandard2.0;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net9.0;net8.0;netstandard2.0",
+              "RecommendedTargetFramework": "net9.0;net8.0;netstandard2.0;net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "Per il framework di destinazione selezionato \u00E8 consigliato l\u0027aggiornamento del pacchetto NuGet.\n\n\u00C8 consigliabile che i pacchetti .NET standard abbiano versioni corrispondenti alla versione di .NET a cui \u00E8 destinato il progetto.\n\nAlcuni altri pacchetti sono anche noti per funzionare meglio con i framework di destinazione selezionati.",
+      "label": "\u00C8 consigliabile eseguire l\u0027aggiornamento del pacchetto NuGet",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Il framework di destinazione del progetto devono essere sostituiti con il nuovo framework di destinazione selezionato per questo aggiornamento.\n\nDurante l\u0027aggiornamento, il framework di destinazione verr\u00E0 modificato in base alla piattaforma corrispondente, se applicabile. In alcuni casi il progetto avr\u00E0 pi\u00F9 framework di destinazione dopo l\u0027aggiornamento se prima usava funzionalit\u00E0 che ora dispongono di piattaforme proprie nelle versioni moderne di .NET Framework (Windows, iOS, Android e cos\u00EC via).",
+      "label": "\u00C8 necessario modificare i framework di destinazione del progetto",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Panoramica del trasferimento da .NET Framework a .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": "SDK di progetto .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "isFeature": false,
+      "description": "API has a behavioral change in selected .NET version: code and binaries may behave differently at runtime without needing recompilation, but the new behavior might be undesirable and require updates.",
+      "label": "Behavioral change in selected .NET version",
+      "severity": "Potential",
+      "effort": 1
+    }
+  }
+}

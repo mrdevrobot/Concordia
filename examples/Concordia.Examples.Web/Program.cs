@@ -1,8 +1,8 @@
 using Concordia.MediatR; // Namespace for the AddMediator method
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection; // Needed for Assembly.GetExecutingAssembly()
-using Microsoft.OpenApi.Models; // Add this using for OpenApiInfo
-using Concordia.Examples.Web; // Namespace for the generated registrations
+using Concordia.Examples.Web;
+using Microsoft.OpenApi; // Namespace for the generated registrations
 
 var builder = WebApplication.CreateBuilder(args);
 
