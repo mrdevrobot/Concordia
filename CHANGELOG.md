@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.0"></a>
+## [2.0.0](https://www.github.com/lucafabbri/Concordia/releases/tag/v2.0.0) (2025-12-30)
+
+### Features
+
+* net10 ([86e47a9](https://www.github.com/lucafabbri/Concordia/commit/86e47a9a9f09e5b488a763afe3cc5060136847bb))
+
+### Breaking Changes
+
+* net10 ([86e47a9](https://www.github.com/lucafabbri/Concordia/commit/86e47a9a9f09e5b488a763afe3cc5060136847bb))
+
 <a name="1.3.0"></a>
 ## [1.3.0](https://www.github.com/lucafabbri/Concordia/releases/tag/v1.3.0) (2025-11-10)
 
