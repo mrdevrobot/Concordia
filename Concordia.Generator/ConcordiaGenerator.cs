@@ -17,6 +17,8 @@ namespace Concordia.Generator;
 // This class is a source generator that automatically registers Concordia handlers.
 public class ConcordiaGenerator : IIncrementalGenerator
 {
+    private const string DiscoverAttributeName = "Concordia.Attributes.DiscoverConcordiaHandlersAttribute";
+
     // Initializes the incremental generator.
     /// <summary>
     /// Initializes the context
@@ -28,6 +30,11 @@ public class ConcordiaGenerator : IIncrementalGenerator
         // Uncomment the following line to enable debugging during development.
         // System.Diagnostics.Debugger.Launch();
 #endif
+        // Check for the attribute
+        var hasAttribute = context.CompilationProvider
+            .Select(static (compilation, _) => compilation.Assembly.GetAttributes()
+                .Any(a => a.AttributeClass?.ToDisplayString() == DiscoverAttributeName));
+
         // Retrieves analyzer config options.
         var compilationAndOptions = context.AnalyzerConfigOptionsProvider
             .Select((options, cancellationToken) => options);
@@ -44,14 +51,22 @@ public class ConcordiaGenerator : IIncrementalGenerator
         IncrementalValueProvider<ImmutableArray<HandlerInfo>> collectedHandlers = handlerClasses.Collect()
             .Select((handlers, _) => handlers.Where(h => h is not null).Select(h => h!).ToImmutableArray());
 
-        // Combines collected handlers with compilation options.
-        var combinedProvider = collectedHandlers.Combine(compilationAndOptions);
+        // Combines collected handlers with compilation options and attribute check.
+        var combinedProvider = collectedHandlers
+            .Combine(compilationAndOptions)
+            .Combine(context.CompilationProvider)
+            .Combine(hasAttribute);
 
         // Registers the source output.
         context.RegisterSourceOutput(combinedProvider, (ctx, source) =>
         {
-            var handlers = source.Left;
-            var options = source.Right;
+            var ((handlersAndOptions, compilation), shouldGenerate) = source;
+            var (handlers, options) = handlersAndOptions;
+
+            if (!shouldGenerate)
+            {
+                return;
+            }
 
             // Default method name for registering handlers.
             var methodName = "AddConcordiaHandlers";
@@ -75,7 +90,7 @@ public class ConcordiaGenerator : IIncrementalGenerator
             }
 
             // Generates the source code for registering handlers.
-            var sourceCode = GenerateHandlersRegistrationCode(methodName, generatedNamespace, handlers);
+            var sourceCode = GenerateHandlersRegistrationCode(methodName, generatedNamespace, handlers, compilation);
             ctx.AddSource("ConcordiaGeneratedHandlersRegistrations.g.cs", SourceText.From(sourceCode, Encoding.UTF8));
         });
     }
@@ -167,8 +182,9 @@ public class ConcordiaGenerator : IIncrementalGenerator
     /// <param name="methodName">The method name</param>
     /// <param name="generatedNamespace">The generated namespace</param>
     /// <param name="handlers">The handlers</param>
+    /// <param name="compilation">The compilation to check references</param>
     /// <returns>The string</returns>
-    private static string GenerateHandlersRegistrationCode(string methodName, string generatedNamespace, ImmutableArray<HandlerInfo> handlers)
+    private static string GenerateHandlersRegistrationCode(string methodName, string generatedNamespace, ImmutableArray<HandlerInfo> handlers, Compilation compilation)
     {
         var sb = new StringBuilder();
 
@@ -197,6 +213,38 @@ public class ConcordiaGenerator : IIncrementalGenerator
             foreach (var implementedInterface in handler.ImplementedInterfaceTypeNames)
             {
                 sb.AppendLine($"            services.AddTransient<{implementedInterface}, {handler.ImplementationTypeName}>();");
+            }
+        }
+
+        // Recursive application functionality
+        sb.AppendLine();
+        sb.AppendLine("            // Register handlers from referenced assemblies");
+        foreach (var referencedAssembly in compilation.SourceModule.ReferencedAssemblySymbols)
+        {
+            // Check if the referenced assembly has the attribute
+            bool shouldScan = referencedAssembly.GetAttributes()
+                .Any(a => a.AttributeClass?.ToDisplayString() == DiscoverAttributeName);
+
+            if (shouldScan)
+            {
+                // We assume default namespace conventions or we need to find the specific class. 
+                // Since we can't easily know the namespace of the referenced assembly's generated code without scanning it, 
+                // we'll try to guess based on assembly name or build properties if accessible (not easily accessible here).
+                
+                var refNamespace = referencedAssembly.Name; // Default default
+                // Checking if the class exists
+                var candidateType = compilation.GetTypeByMetadataName($"{refNamespace}.ConcordiaGeneratedRegistrations");
+
+                // If not found, maybe it used "ConcordiaGenerated" default?
+                if (candidateType == null)
+                {
+                   candidateType = compilation.GetTypeByMetadataName("ConcordiaGenerated.ConcordiaGeneratedRegistrations");
+                }
+
+                if (candidateType != null)
+                {
+                     sb.AppendLine($"            global::{candidateType.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)}.AddConcordiaHandlers(services);");
+                }
             }
         }
 

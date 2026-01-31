@@ -1,0 +1,5 @@
+<Project>
+  <ItemGroup Condition="'$(DisableConcordiaAutoDiscovery)' == ''">
+    <AssemblyAttribute Include="Concordia.Attributes.DiscoverConcordiaHandlersAttribute" />
+  </ItemGroup>
+</Project>
