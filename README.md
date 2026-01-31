@@ -69,7 +69,7 @@ Concordia is a .NET library implementing the **Mediator pattern**, designed to b
 
 * **Automatic Handler Registration**: Concordia offers two approaches for handler registration:
 
-    * **Compile-time (Source Generator)**: The recommended approach for new projects, providing optimal startup performance.
+    * **Compile-time (Source Generator)**: The recommended approach for new projects. It requires **Zero Configuration**: just install the package, and handlers are automatically discovered (even in referenced projects).
 
     * **Runtime Reflection**: A compatibility layer for easier migration from existing MediatR setups, now using its own `ConcordiaMediatRServiceConfiguration` class, offering flexible configuration options including service lifetimes, pre/post-processors, and custom notification publishers.
 
@@ -292,7 +292,7 @@ You will use either the **Source Generator method** (recommended for new project
 
 #### Option A: Using the Source Generator (Recommended)
 
-This method provides optimal startup performance by registering handlers at compile-time.
+This method provides optimal startup performance by registering handlers at compile-time. It is **Zero-Config**: the necessary attributes are automatically injected by the NuGet package, enabling seamless discovery of handlers in the current project and any referenced assemblies that also use Concordia.
 
 ##### i. Configure your `.csproj`
 
