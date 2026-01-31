@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.1.0"></a>
+## [2.1.0](https://www.github.com/mrdevrobot/Concordia/releases/tag/v2.1.0) (2026-01-31)
+
+### Features
+
+* Implement DiscoverConcordiaHandlersAttribute, recursive discovery, and auto-injection ([6327d2d](https://www.github.com/mrdevrobot/Concordia/commit/6327d2d63f5f2bf2c541acd1be3601159de5a038))
+
 <a name="2.0.0"></a>
 ## [2.0.0](https://www.github.com/lucafabbri/Concordia/releases/tag/v2.0.0) (2025-12-30)
 
