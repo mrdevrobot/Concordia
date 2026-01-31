@@ -2,7 +2,8 @@ using Concordia.MediatR; // Namespace for the AddMediator method
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection; // Needed for Assembly.GetExecutingAssembly()
 using Concordia.Examples.Web;
-using Microsoft.OpenApi; // Namespace for the generated registrations
+using Microsoft.OpenApi;
+using Concordia; // Namespace for the generated registrations
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,27 +34,9 @@ builder.Services.AddSwaggerGen(options =>
 
 // Register Concordia and all handlers using the reflection-based AddMediator method.
 // It now accepts a configuration action, similar to MediatR, but using our internal class.
-builder.Services.AddMediator(cfg =>
-{
-    cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
-
-    // Example: Register all services as Scoped
-    cfg.Lifetime = ServiceLifetime.Scoped;
-
-    // Example: Register a custom notification publisher
-    // cfg.NotificationPublisherType = typeof(MyCustomNotificationPublisher);
-
-    // Example: Add an explicit pre-processor
-    // cfg.AddRequestPreProcessor<MyCustomPreProcessor>();
-
-    // Example: Add an explicit post-processor
-    // cfg.AddRequestPostProcessor<MyCustomPostProcessor>();
-
-    // Example: Add an explicit stream behavior
-    // cfg.AddStreamBehavior<MyCustomStreamBehavior>();
-});
+builder.Services.AddConcordiaCoreServices();
+builder.Services.AddMyCustomHandlers();
 builder.Services.AddControllers();
-builder.Services.AddMyCustomHandlers();  
 
 var app = builder.Build();
 

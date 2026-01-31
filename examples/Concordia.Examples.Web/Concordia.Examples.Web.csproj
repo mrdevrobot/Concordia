@@ -23,5 +23,7 @@
   <ItemGroup>
     <CompilerVisibleProperty Include="ConcordiaGeneratedMethodName" />
   </ItemGroup>
+
+  <Import Project="..\..\Concordia.Generator\build\Concordia.Generator.targets" />
   
 </Project>

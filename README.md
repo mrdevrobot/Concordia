@@ -92,15 +92,15 @@ To get started with Concordia, install the necessary packages in your applicatio
 **Option 1: Using the Source Generator (Recommended for New Projects)**
 
 ```bash
-dotnet add package Concordia.Core --version 1.2.0
-dotnet add package Concordia.Generator --version 1.2.0
+dotnet add package Concordia.Core --version 2.1.0
+dotnet add package Concordia.Generator --version 2.1.0
 ```
 
 **Option 2: Using the MediatR Compatibility Layer (For Migration or Reflection Preference)**
 
 ```bash
-dotnet add package Concordia.Core --version 1.2.0
-dotnet add package Concordia.MediatR --version 1.2.0
+dotnet add package Concordia.Core --version 2.1.0
+dotnet add package Concordia.MediatR --version 2.1.0
 ```
 
 Alternatively, you can install them via the NuGet Package Manager in Visual Studio.
@@ -314,9 +314,9 @@ Add the `Concordia.Generator` as a `ProjectReference` to your application projec
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Concordia" Version="1.2.0"/>
+    <PackageReference Include="Concordia" Version="2.1.0"/>
     <!-- Required for compile-time handler registration -->
-    <PackageReference Include="Concordia.Generator" Version="1.2.0" PrivateAssets="all" />
+    <PackageReference Include="Concordia.Generator" Version="2.1.0" PrivateAssets="all" />
   </ItemGroup>
 
   <!-- Ensure your Request, Handler, Processor, and Behavior files are included in the project -->
