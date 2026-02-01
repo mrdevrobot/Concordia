@@ -243,7 +243,26 @@ public class ConcordiaGenerator : IIncrementalGenerator
 
                 if (candidateType != null)
                 {
-                     sb.AppendLine($"            {candidateType.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)}.AddConcordiaHandlers(services);");
+                     // Fix: Dynamic discovery of the registration method
+                     // We look for a public static method that returns IServiceCollection and takes IServiceCollection as parameter
+                     var registrationMethod = candidateType.GetMembers()
+                        .OfType<IMethodSymbol>()
+                        .FirstOrDefault(m => 
+                            m.IsStatic && 
+                            m.DeclaredAccessibility == Accessibility.Public &&
+                            m.ReturnType.Name == "IServiceCollection" &&
+                            m.Parameters.Length == 1 &&
+                            m.Parameters[0].Type.Name == "IServiceCollection");
+
+                     if (registrationMethod != null)
+                     {
+                         sb.AppendLine($"            {candidateType.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)}.{registrationMethod.Name}(services);");
+                     }
+                     else
+                     {
+                         // Fallback to default if signature lookup fails (though it shouldn't for generated code)
+                         sb.AppendLine($"            {candidateType.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)}.AddConcordiaHandlers(services);");
+                     }
                 }
             }
         }
