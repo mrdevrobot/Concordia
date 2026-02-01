@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.2.0"></a>
+## [2.2.0](https://www.github.com/mrdevrobot/Concordia/releases/tag/v2.2.0) (2026-02-01)
+
+### Features
+
+* **examples:** add shared examples project and ProductsController ([4701fa5](https://www.github.com/mrdevrobot/Concordia/commit/4701fa5768c247c7f5771aa01b68223d1b296150))
+
 <a name="2.1.0"></a>
 ## [2.1.0](https://www.github.com/mrdevrobot/Concordia/releases/tag/v2.1.0) (2026-01-31)
 
