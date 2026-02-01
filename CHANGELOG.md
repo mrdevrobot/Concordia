@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.3.0"></a>
+## [2.3.0](https://www.github.com/mrdevrobot/Concordia/releases/tag/v2.3.0) (2026-02-01)
+
+### Features
+
+* setup Jekyll documentation and add generator tests ([c1f4da5](https://www.github.com/mrdevrobot/Concordia/commit/c1f4da577fdca44c2595652b7f9ce24487df14bb))
+
 <a name="2.2.0"></a>
 ## [2.2.0](https://www.github.com/mrdevrobot/Concordia/releases/tag/v2.2.0) (2026-02-01)
 
