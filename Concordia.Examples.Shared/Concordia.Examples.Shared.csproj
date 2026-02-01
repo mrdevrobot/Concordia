@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Concordia.Core\Concordia.Core.csproj" />
+    <ProjectReference Include="..\Concordia.Generator\Concordia.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <Import Project="..\Concordia.Generator\build\Concordia.Generator.targets" />
+
+</Project>

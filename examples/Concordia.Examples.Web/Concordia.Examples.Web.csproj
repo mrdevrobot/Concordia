@@ -6,7 +6,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <ConcordiaGeneratedMethodName>AddMyCustomHandlers</ConcordiaGeneratedMethodName>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
   </PropertyGroup>
 
@@ -16,12 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Concordia.MediatR\Concordia.MediatR.csproj" />
+    <ProjectReference Include="..\..\Concordia.Examples.Shared\Concordia.Examples.Shared.csproj" />
     <ProjectReference Include="..\..\Concordia.Generator\Concordia.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <CompilerVisibleProperty Include="ConcordiaGeneratedMethodName" />
   </ItemGroup>
 
   <Import Project="..\..\Concordia.Generator\build\Concordia.Generator.targets" />

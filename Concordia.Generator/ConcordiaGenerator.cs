@@ -243,7 +243,7 @@ public class ConcordiaGenerator : IIncrementalGenerator
 
                 if (candidateType != null)
                 {
-                     sb.AppendLine($"            global::{candidateType.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)}.AddConcordiaHandlers(services);");
+                     sb.AppendLine($"            {candidateType.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)}.AddConcordiaHandlers(services);");
                 }
             }
         }
