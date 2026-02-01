@@ -1,0 +1,26 @@
+title: Concordia Documentation
+description: Documentation for Concordia, a lightweight .NET Mediator library.
+baseurl: "/Concordia" # Assuming it will be hosted at username.github.io/Concordia or similar
+url: ""
+github_username: Concordia
+theme: minima
+
+header_pages: []
+
+sidebar:
+  - title: Getting Started
+    url: /
+  - title: Installation
+    url: /installation.html
+  - title: Mediator
+    children:
+      - title: Commands
+        url: /mediator/commands.html
+      - title: Notification
+        url: /mediator/notification.html
+      - title: Pipelines
+        url: /mediator/pipelines.html
+  - title: Generators
+    url: /generators.html
+  - title: MediatR Compat
+    url: /mediatr-compat.html
