@@ -21,8 +21,8 @@ Remove `MediatR` and install `Concordia`.
 
 ```diff
 - <PackageReference Include="MediatR" Version="12.0.1" />
-+ <PackageReference Include="Concordia.Core" Version="2.2.0" />
-+ <PackageReference Include="Concordia.MediatR" Version="2.2.0" />
++ <PackageReference Include="Concordia.Core" Version="2.3.0" />
++ <PackageReference Include="Concordia.MediatR" Version="2.3.0" />
 ```
 
 ### 2. Rename Namespaces

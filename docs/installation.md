@@ -26,8 +26,8 @@ This approach leverages the Roslyn compiler to inject registration code directly
 Add the Core library and the Generator to your project using the .NET CLI:
 
 ```bash
-dotnet add package Concordia.Core --version 2.2.0
-dotnet add package Concordia.Generator --version 2.2.0
+dotnet add package Concordia.Core --version 2.3.0
+dotnet add package Concordia.Generator --version 2.3.0
 ```
 
 ### 2. Verify csproj Configuration
@@ -35,8 +35,8 @@ Ensure that the `Concordia.Generator` is properly referenced (usually handled au
 
 ```xml
 <ItemGroup>
-    <PackageReference Include="Concordia" Version="2.2.0" />
-    <PackageReference Include="Concordia.Generator" Version="2.2.0" PrivateAssets="all" />
+    <PackageReference Include="Concordia" Version="2.3.0" />
+    <PackageReference Include="Concordia.Generator" Version="2.3.0" PrivateAssets="all" />
 </ItemGroup>
 ```
 
@@ -78,8 +78,8 @@ If you cannot immediately switch to compile-time generation (e.g., due to comple
 Add the Core library and the MediatR compatibility layer:
 
 ```bash
-dotnet add package Concordia.Core --version 2.2.0
-dotnet add package Concordia.MediatR --version 2.2.0
+dotnet add package Concordia.Core --version 2.3.0
+dotnet add package Concordia.MediatR --version 2.3.0
 ```
 
 ### 2. Register Services

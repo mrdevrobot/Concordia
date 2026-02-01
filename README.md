@@ -79,7 +79,7 @@ Concordia is a .NET library implementing the **Mediator pattern**, designed to b
 
 ## Installation
 
-Concordia is distributed via three NuGet packages, all currently at **version 2.2.0**:
+Concordia is distributed via three NuGet packages, all currently at **version 2.3.0**:
 
 1.  **`Concordia.Core`**: Contains the interfaces (`IMediator`, `ISender`, `IRequest`, etc.), the `Mediator` implementation, and core DI extension methods.
 
@@ -92,15 +92,15 @@ To get started with Concordia, install the necessary packages in your applicatio
 **Option 1: Using the Source Generator (Recommended for New Projects)**
 
 ```bash
-dotnet add package Concordia.Core --version 2.2.0
-dotnet add package Concordia.Generator --version 2.2.0
+dotnet add package Concordia.Core --version 2.3.0
+dotnet add package Concordia.Generator --version 2.3.0
 ```
 
 **Option 2: Using the MediatR Compatibility Layer (For Migration or Reflection Preference)**
 
 ```bash
-dotnet add package Concordia.Core --version 2.2.0
-dotnet add package Concordia.MediatR --version 2.2.0
+dotnet add package Concordia.Core --version 2.3.0
+dotnet add package Concordia.MediatR --version 2.3.0
 ```
 
 Alternatively, you can install them via the NuGet Package Manager in Visual Studio.
@@ -314,9 +314,9 @@ Add the `Concordia.Generator` as a `ProjectReference` to your application projec
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Concordia" Version="2.2.0"/>
+    <PackageReference Include="Concordia" Version="2.3.0"/>
     <!-- Required for compile-time handler registration -->
-    <PackageReference Include="Concordia.Generator" Version="2.2.0" PrivateAssets="all" />
+    <PackageReference Include="Concordia.Generator" Version="2.3.0" PrivateAssets="all" />
   </ItemGroup>
 
   <!-- Ensure your Request, Handler, Processor, and Behavior files are included in the project -->
