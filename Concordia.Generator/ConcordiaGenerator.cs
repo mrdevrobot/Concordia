@@ -194,7 +194,7 @@ public class ConcordiaGenerator : IIncrementalGenerator
         sb.AppendLine("using Microsoft.Extensions.DependencyInjection;");
         sb.AppendLine("using Concordia;");
         sb.AppendLine();
-        sb.AppendLine($"namespace {generatedNamespace}");
+        sb.AppendLine($"namespace {generatedNamespace}.Generated");
         sb.AppendLine("{");
         sb.AppendLine($"    public static class ConcordiaGeneratedRegistrations");
         sb.AppendLine("    {");
