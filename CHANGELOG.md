@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.3.2"></a>
+## [2.3.2](https://www.github.com/mrdevrobot/Concordia/releases/tag/v2.3.2) (2026-02-02)
+
+### Bug Fixes
+
+* adds Generated suffix to generated files namespace to avoid uninteded using ([74838d2](https://www.github.com/mrdevrobot/Concordia/commit/74838d28e49303a434fe8b7c33ae791618b64f6b))
+
 <a name="2.3.1"></a>
 ## [2.3.1](https://www.github.com/mrdevrobot/Concordia/releases/tag/v2.3.1) (2026-02-01)
 
