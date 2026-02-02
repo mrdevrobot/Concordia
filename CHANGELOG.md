@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.3.3"></a>
+## [2.3.3](https://www.github.com/mrdevrobot/Concordia/releases/tag/v2.3.3) (2026-02-02)
+
 <a name="2.3.2"></a>
 ## [2.3.2](https://www.github.com/mrdevrobot/Concordia/releases/tag/v2.3.2) (2026-02-02)
 
