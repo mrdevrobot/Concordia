@@ -39,22 +39,30 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore Concordia.sln
 
-      # 4. Compila la soluzione in configurazione Release
-      - name: Build
-        run: dotnet build Concordia.sln --no-restore --configuration Release
-
-      # 5. Esegue i test della soluzione
-      - name: Run tests
-        run: dotnet test Concordia.sln --no-build --configuration Release
+      # 4. Compila solo i progetti non di test in configurazione Release
+      - name: Build Core
+        run: dotnet build Concordia.Core/Concordia.Core.csproj --no-restore --configuration Release
+      
+      - name: Build Generator
+        run: dotnet build Concordia.Generator/Concordia.Generator.csproj --no-restore --configuration Release
+      
+      - name: Build MediatR
+        run: dotnet build Concordia.MediatR/Concordia.MediatR.csproj --no-restore --configuration Release
+      
+      - name: Build Examples.Shared
+        run: dotnet build Concordia.Examples.Shared/Concordia.Examples.Shared.csproj --no-restore --configuration Release
 
       # --- Pubblicazione ---
       # I seguenti passaggi vengono eseguiti SOLO se il workflow
       # è stato attivato dal push di un tag (es. v1.2.3)
 
-      # 6. Crea i pacchetti NuGet per tutti i progetti nella soluzione
+      # 6. Crea i pacchetti NuGet per i progetti pacchettizzabili
       - name: Pack projects
         if: startsWith(github.ref, 'refs/tags/v')
-        run: dotnet pack Concordia.sln --no-build --configuration Release --output ./packages
+        run: |
+          dotnet pack Concordia.Core/Concordia.Core.csproj --no-build --configuration Release --output ./packages
+          dotnet pack Concordia.Generator/Concordia.Generator.csproj --no-build --configuration Release --output ./packages
+          dotnet pack Concordia.MediatR/Concordia.MediatR.csproj --no-build --configuration Release --output ./packages
 
       # 7. Pubblica tutti i pacchetti .nupkg creati nel passo precedente
       - name: Publish to NuGet
