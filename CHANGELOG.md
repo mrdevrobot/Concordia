@@ -5,6 +5,37 @@ All notable changes to this project will be documented in this file. See [versio
 <a name="2.3.3"></a>
 ## [2.3.3](https://www.github.com/mrdevrobot/Concordia/releases/tag/v2.3.3) (2026-02-02)
 
+### Features
+
+* adds background parallel publisher ([8d65323](https://www.github.com/mrdevrobot/Concordia/commit/8d65323dbb017cb5b7ac075d447cee1b81472d6a))
+* adds default pre and post behavior and task when all publisher ([9ff508f](https://www.github.com/mrdevrobot/Concordia/commit/9ff508f1077dcb2d2910e68a848f394331a6d944))
+* adds support to net9.0 ([4e9d9f5](https://www.github.com/mrdevrobot/Concordia/commit/4e9d9f5fc4626c39edc2facc50419ea4cf879747))
+* Implement DiscoverConcordiaHandlersAttribute, recursive discovery, and auto-injection ([6327d2d](https://www.github.com/mrdevrobot/Concordia/commit/6327d2d63f5f2bf2c541acd1be3601159de5a038))
+* net10 ([86e47a9](https://www.github.com/mrdevrobot/Concordia/commit/86e47a9a9f09e5b488a763afe3cc5060136847bb))
+* setup Jekyll documentation and add generator tests ([c1f4da5](https://www.github.com/mrdevrobot/Concordia/commit/c1f4da577fdca44c2595652b7f9ce24487df14bb))
+* supports the send on dynamic objects ([c2b676b](https://www.github.com/mrdevrobot/Concordia/commit/c2b676b3cc9b6d765fd2a29884c7a4fea88a2e4a))
+* **examples:** add shared examples project and ProductsController ([4701fa5](https://www.github.com/mrdevrobot/Concordia/commit/4701fa5768c247c7f5771aa01b68223d1b296150))
+
+### Bug Fixes
+
+* adds cancellation token to next call for pipelines ([0d1237b](https://www.github.com/mrdevrobot/Concordia/commit/0d1237b21a364f8a8434602b0ae6c1b2b34a2d4a))
+* adds Generated suffix to generated files namespace to avoid uninteded using ([74838d2](https://www.github.com/mrdevrobot/Concordia/commit/74838d28e49303a434fe8b7c33ae791618b64f6b))
+* corrects generator csproj for nuget ([4d79fa2](https://www.github.com/mrdevrobot/Concordia/commit/4d79fa2fc9daaeaa45e781e10b1c8288b31232fc))
+* corrects generator handlers identification ([cb13d19](https://www.github.com/mrdevrobot/Concordia/commit/cb13d1990c6fd6affc29fa52d60b0e5e59ddbf06))
+* corrects reamde ([b6bddf5](https://www.github.com/mrdevrobot/Concordia/commit/b6bddf5ebecdde8df514ab4ff3267024d998da3e))
+* corrects the generator ([84158d6](https://www.github.com/mrdevrobot/Concordia/commit/84158d65291dcf7f4c3e61dd0b47544fd8703bfb))
+* corrects the generator ([463f0ea](https://www.github.com/mrdevrobot/Concordia/commit/463f0eaf5c53423e9e7f9240b5d6d3081bfdc15b))
+* move contracts to Concordia namespace ([bfe98df](https://www.github.com/mrdevrobot/Concordia/commit/bfe98df2c889fe0faca1b31057687dcc41abb22d))
+* recursive namespace correction ([479c495](https://www.github.com/mrdevrobot/Concordia/commit/479c495b6b13b965ff3027eeac1b63888112180c))
+* update docs version to 2.3.0 and enable main branch deploy ([851a80d](https://www.github.com/mrdevrobot/Concordia/commit/851a80d8665e201544e44d4fdf038388cba9274a))
+
+### Breaking Changes
+
+* net10 ([86e47a9](https://www.github.com/mrdevrobot/Concordia/commit/86e47a9a9f09e5b488a763afe3cc5060136847bb))
+
+<a name="2.3.3"></a>
+## [2.3.3](https://www.github.com/mrdevrobot/Concordia/releases/tag/v2.3.3) (2026-02-02)
+
 <a name="2.3.2"></a>
 ## [2.3.2](https://www.github.com/mrdevrobot/Concordia/releases/tag/v2.3.2) (2026-02-02)
 
