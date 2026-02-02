@@ -232,13 +232,13 @@ public class ConcordiaGenerator : IIncrementalGenerator
                 // we'll try to guess based on assembly name or build properties if accessible (not easily accessible here).
                 
                 var refNamespace = referencedAssembly.Name; // Default default
-                // Checking if the class exists
-                var candidateType = compilation.GetTypeByMetadataName($"{refNamespace}.ConcordiaGeneratedRegistrations");
+                // Checking if the class exists (with .Generated suffix)
+                var candidateType = compilation.GetTypeByMetadataName($"{refNamespace}.Generated.ConcordiaGeneratedRegistrations");
 
                 // If not found, maybe it used "ConcordiaGenerated" default?
                 if (candidateType == null)
                 {
-                   candidateType = compilation.GetTypeByMetadataName("ConcordiaGenerated.ConcordiaGeneratedRegistrations");
+                   candidateType = compilation.GetTypeByMetadataName("ConcordiaGenerated.Generated.ConcordiaGeneratedRegistrations");
                 }
 
                 if (candidateType != null)
