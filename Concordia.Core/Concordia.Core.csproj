@@ -10,7 +10,7 @@
     <Version>2.3.3</Version>
     <Authors>Luca Fabbri</Authors>
     <Description>A lightweight and powerful .NET Mediator library implementing the Mediator pattern.</Description>
-    <RepositoryUrl>https://github.com/lucafabbri/Concordia</RepositoryUrl>
+    <RepositoryUrl>https://github.com/mrdevrobot/Concordia</RepositoryUrl>
     <PackageTags>mediator;cqrs;messaging;pipeline;concordia;lucafabbri</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
